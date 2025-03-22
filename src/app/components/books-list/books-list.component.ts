@@ -21,7 +21,8 @@ export class BooksListComponent {
     });
   }
 
-  navigateToBookCard(id: number):void {
-    this.router.navigate(['book', id]);
+  navigateToBookCard(book: BookItem):void {
+    localStorage.setItem('selectedBook', JSON.stringify(book));
+    this.router.navigate(['book', book.id]);
   }
 }
