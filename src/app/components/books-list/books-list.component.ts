@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { BookItem, BooksService } from '../../books.service';
 import { TableModule } from 'primeng/table';
 import { Router } from '@angular/router';
+import { InputTextModule } from 'primeng/inputtext';
 
 @Component({
   selector: 'app-books-list',
-  imports: [TableModule],
+  imports: [TableModule, InputTextModule],
   templateUrl: './books-list.component.html',
   styleUrl: './books-list.component.scss',
 })
@@ -21,7 +22,7 @@ export class BooksListComponent {
     });
   }
 
-  navigateToBookCard(book: BookItem):void {
+  navigateToBookCard(book: BookItem): void {
     localStorage.setItem('selectedBook', JSON.stringify(book));
     this.router.navigate(['book', book.id]);
   }

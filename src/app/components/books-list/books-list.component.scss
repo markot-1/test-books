@@ -1,0 +1,39 @@
+.filter-wrapper {
+    display: flex;
+    column-gap: 20px;
+
+    input {
+        height: 35px;
+        border: 1px solid grey;
+        border-radius: 3px;
+        color: #414040;
+        padding-left: 10px;
+        width: 250px;
+    }
+}
+
+::ng-deep .p-datatable-header {
+    border: 1px solid transparent;
+}
+
+::ng-deep .p-datatable-table-container {
+    margin-top: 30px;
+    border-collapse: collapse;
+
+    .p-datatable-table {
+        border-collapse: collapse;
+    }
+
+    .p-datatable-thead>tr>th,
+    .p-datatable-tbody>tr>td {
+        height: 40px;
+        width: 200px;
+        border: 1px solid grey;
+        text-align: center;
+    }
+
+    .p-datatable-thead>tr>th {
+        font-weight: 600;
+    }
+
+}
