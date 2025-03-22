@@ -18,7 +18,7 @@ export interface BookItem {
 
 export class BooksService {
 
-  private apiUrl = 'https://run.mocky.io/v3/61ffb6d0-5459-4777-9a0c-427618216cb3'; 
+  private apiUrl = 'https://api.jsonbin.io/v3/b/67dec4978561e97a50f0d1b1'; 
 
   constructor(private http: HttpClient) {}
 
