@@ -54,3 +54,10 @@ $shadow: 0 5px 15px 1px rgba(66, 70, 85, 0.1882352941);
     border-radius: 5px;
 
 }
+
+%td {
+    height: 40px;
+    width: 200px;
+    text-align: center;
+    color: $color-black;
+}

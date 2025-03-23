@@ -1,0 +1,25 @@
+@import '../../../assets/variables.scss';
+
+.book-wrapper {
+    @extend %overlay;
+    padding: 20px;
+    margin: 30px;
+    width: 550px;
+
+    h2,
+    p {
+        color: $color-black;
+    }
+    
+    ::ng-deep .p-datatable-table-container {
+        .p-datatable-thead>tr>th,
+        .p-datatable-tbody>tr>td {
+          @extend %td;
+        }
+    
+        .p-datatable-thead>tr>th {
+            font-weight: 600;
+            background: $color-light-grey;
+        }
+    }
+}

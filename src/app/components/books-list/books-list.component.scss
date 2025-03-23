@@ -25,10 +25,7 @@
 
     .p-datatable-thead>tr>th,
     .p-datatable-tbody>tr>td {
-        height: 40px;
-        width: 200px;
-        text-align: center;
-        color: $color-black;
+        @extend %td;
     }
 
     .p-datatable-thead>tr>th {
