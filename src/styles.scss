@@ -1,0 +1,27 @@
+.p-overlay {
+    width: 200px;
+}
+
+.p-select-list-container,
+.p-multiselect-list-container {
+    overflow: auto;
+    box-shadow: 0 5px 15px 1px rgba(66, 70, 85, 0.1882352941);
+    margin-top: 0;
+    background: white;
+    padding: 10px 0;
+    border-radius: 5px;
+
+    .p-select-option,
+    .p-multiselect-option {
+        height: 30px;
+        color: #424655;
+        padding-left: 10px;
+    }
+
+    .p-select-option:hover,
+    .p-select-option-selected,
+    .p-multiselect-option:hover,
+    .p-multiselect-option>.p-highlight {
+        background: #c7d5e2 !important;
+    }
+}
