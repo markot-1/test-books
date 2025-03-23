@@ -33,8 +33,6 @@ export class BooksService {
       'X-Master-Key': this.apiKey, 
     });
 
-    return this.http.put(this.apiUrl, { data: newBooksList }, { headers }).subscribe(() => {
-      console.log('Данные успешно обновлены');
-    });
+    return this.http.put(this.apiUrl, { data: newBooksList }, { headers });
   }
 }

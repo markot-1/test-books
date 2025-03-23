@@ -1,14 +1,12 @@
+@import '../../../assets/variables.scss';
+
 .filter-wrapper {
     display: flex;
     column-gap: 20px;
     padding: 10px 20px;
 
     input {
-        height: 35px;
-        border: 1px solid grey;
-        border-radius: 3px;
-        color: #414040;
-        padding-left: 10px;
+        @extend %input;
         width: 250px;
     }
 }
@@ -30,7 +28,7 @@
         height: 40px;
         width: 200px;
         text-align: center;
-        color: #414040;
+        color: $color-black;
     }
 
     .p-datatable-thead>tr>th {
@@ -39,7 +37,7 @@
 
     .p-datatable-thead>tr,
     .p-datatable-tbody>tr:hover {
-        background: #eff2f4;
+        background: $color-light-grey;
 
         .p-select-label,
         .p-multiselect-label {
@@ -53,20 +51,29 @@
 }
 
 .add-button {
-    display: block;
-    height: 40px;
-    width: 180px;
-    line-height: 38px;
-    border-radius: 3px;
+    @extend %add-button;
     margin: 10px 20px;
-    padding: 0 10px;
-    background: #2F80ED;
-    color: white;
-    border: 1px solid transparent;
-    box-shadow: 2px 0 4px 0 #2F80ED;
+}
 
-    &:hover {
-        box-shadow: none;
-        cursor: pointer;
+::ng-deep .p-overlay {
+    width: 200px;
+
+    .p-select-list-container,
+    .p-multiselect-list-container {
+        @extend %overlay;
+
+        .p-select-option,
+        .p-multiselect-option {
+            height: 30px;
+            color: $color-black;
+            padding-left: 10px;
+        }
+
+        .p-select-option:hover,
+        .p-select-option-selected,
+        .p-multiselect-option:hover,
+        .p-multiselect-option>.p-highlight {
+            background: $color-light-grey !important;
+        }
     }
 }

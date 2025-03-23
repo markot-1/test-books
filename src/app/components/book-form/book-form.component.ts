@@ -74,7 +74,8 @@ export class BookFormComponent {
 
   onSubmit(value: BookItem) {
     this.booksList = [...this.booksList, value];
-    this.booksService.updateBooksList(this.booksList);
-    this.router.navigate(['books']);
+    this.booksService.updateBooksList(this.booksList).subscribe(() => {
+      this.router.navigate(['books']);
+    });
   }
 }
