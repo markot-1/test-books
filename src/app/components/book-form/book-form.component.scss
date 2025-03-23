@@ -56,4 +56,11 @@
             cursor: pointer;
         }
     }
+    
+    .disabled-button {
+        box-shadow: none;
+        background: #6ea2e8;
+        color: #faf6f6;
+        cursor: auto;
+    }
 }

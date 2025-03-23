@@ -9,7 +9,7 @@ export interface BookItem {
   pages: number, 
   language: string, 
   genre: string, 
-  description: string
+  description?: string
 }
 
 @Injectable({
