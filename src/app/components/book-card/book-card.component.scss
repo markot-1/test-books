@@ -1,5 +1,20 @@
 @import '../../../assets/variables.scss';
 
+.return-button {
+    margin: 30px;
+    line-height: 40px;
+    padding: 8px 10px;
+    background: $color-light-grey;
+    color: $color-black;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 2px 0 4px 0 rgba(66, 70, 85, 0.1882352941);
+
+    &:hover {
+        box-shadow: none;
+    }
+}
+
 .book-wrapper {
     @extend %overlay;
     padding: 20px;

@@ -7,6 +7,20 @@
     (input)="table.filter(filterInput.value, 'name', 'contains')"
     placeholder="Поиск по названию"
   />
+  <input
+  type="number"
+  pInputText
+  [(ngModel)]="minPages"
+  (input)="applyPageFilter()"
+  placeholder="Минимум страниц"
+/>
+<input
+  type="number"
+  pInputText
+  [(ngModel)]="maxPages"
+  (input)="applyPageFilter()"
+  placeholder="Максимум страниц"
+/>
 </div>
 <p-table #table [value]="booksList">
   <ng-template #header>
