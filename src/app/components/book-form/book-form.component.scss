@@ -1,0 +1,43 @@
+@import '../../../assets/variables.scss';
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+
+    h2 {
+        color: $color-black;
+    }
+
+    label {
+        font-size: 16px;
+        font-weight: bold;
+        color: $color-black;
+        margin: 15px 5px 10px;
+        cursor: pointer;
+    }
+
+    input,
+    textarea {
+        @extend %input;
+        width: 300px;
+    }
+
+    textarea {
+        align-content: center;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    .add-button {
+        @extend %add-button;
+    }
+
+    .disabled-button {
+       @extend %disabled-button;
+    }
+    
+}

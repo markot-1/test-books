@@ -1,0 +1,31 @@
+@import '../../../assets/variables.scss';
+
+::ng-deep p-select {
+    .p-select-label {
+        @extend %input;
+        width: 300px;
+    }
+
+    .p-select-dropdown {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        bottom: 50%;
+        color: $color-black;
+    }
+
+    .p-select-list-container {
+        @extend %overlay;
+
+        .p-select-option {
+            height: 30px;
+            color: $color-black;
+            padding-left: 10px;
+        }
+
+        .p-select-option:hover,
+        .p-select-option-selected {
+            background: $color-light-grey !important;
+        }
+    }
+}

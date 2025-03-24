@@ -1,0 +1,9 @@
+<p-select
+  [options]="options"
+  [(ngModel)]="selectedValue"
+  [attr.tabindex]="-1"
+  [placeholder]="placeholder"
+  [editable]="true"
+  (onChange)="updateValue($event.value)"
+>
+</p-select>

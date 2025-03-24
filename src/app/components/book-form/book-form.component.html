@@ -1,0 +1,55 @@
+<form class="form-group" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+  <h2>Добавить новую книгу</h2>
+  <label for="name">Название книги</label>
+  <input
+    type="text"
+    id="name"
+    formControlName="name"
+    placeholder="Введите название книги"
+  />
+
+  <label for="author">Имя автора</label>
+  <app-select
+    formControlName="author"
+    [options]="authorsList"
+    [placeholder]="'Выберите автора книги'"
+  ></app-select>
+
+  <label for="pages">Количество страниц</label>
+  <input
+    type="number"
+    id="pages"
+    formControlName="pages"
+    placeholder="Введите количество страниц"
+  />
+
+  <label for="language">Язык книги</label>
+  <app-select
+    formControlName="language"
+    [options]="languagesList"
+    [placeholder]="'Выберите язык книги'"
+  ></app-select>
+
+  <label for="genre">Жанр</label>
+  <input
+    type="text"
+    id="genre"
+    formControlName="genre"
+    placeholder="Введите жанр книги"
+  />
+
+  <label for="description">Описание</label>
+  <textarea
+    id="description"
+    formControlName="description"
+    placeholder="Введите описание книги"
+  ></textarea>
+
+  <p-button
+    class="add-button"
+    type="submit"
+    [disabled]="form.invalid"
+    [ngClass]="{ 'disabled-button': form.invalid }"
+    >Добавить книгу</p-button
+  >
+</form>
